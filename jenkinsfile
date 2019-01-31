@@ -21,5 +21,5 @@ node {
       archive 'target/*.war'
    }
    stage ('deploy'){
-       bat '''copy C:\Program Files (x86)\Jenkins\workspace\springpipe\target\*.war D:\DevOps\bin\apache-tomcat-9.0.14\apache-tomcat-9.0.14\webapps
+       bat '''copy C:\Program Files (x86)\Jenkins\workspace\springpipe\target\*.war D:\DevOps\bin\apache-tomcat-9.0.14\apache-tomcat-9.0.14\webapps'''
 }
