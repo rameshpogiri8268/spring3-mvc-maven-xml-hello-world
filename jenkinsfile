@@ -2,11 +2,11 @@ node {
    def mvnHome
    stage('getscm') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/ybmadhu/spring3-mvc-maven-xml-hello-world.git'
+      git 'https://github.com/rameshpogiri8268/spring3-mvc-maven-xml-hello-world.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
-      mvnHome = tool 'Maven'
+      mvnHome = tool 'maven3'
    }
    stage('Build') {
       // Run the maven build
@@ -21,6 +21,5 @@ node {
       archive 'target/*.war'
    }
    stage ('deploy'){
-       bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\kelly_pipeline_java_maven\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
-   }
+       bat '''copy C:\Program Files (x86)\Jenkins\workspace\springpipe\target\*.war D:\DevOps\bin\apache-tomcat-9.0.14\apache-tomcat-9.0.14\webapps
 }
